@@ -83,7 +83,10 @@
 <!-- The News Section -->
   <div class="w3-container w3-light-grey w3-padding-32" id="news">
    <h2>News</h2>
-      <p><li> 08/2021, one paper has been published by <a href="https://arxiv.org/abs/2107.10479">arXiv</a>, "Copy and Paste method based on Pose for Re-identification".</li></p>
+<!--      <p><li> 08/2021, one paper has been published by <a href="https://arxiv.org/abs/2107.10479">arXiv</a>, "Copy and Paste method based on Pose for Re-identification".</li></p>-->
+      <p><li> 05/2022, "A novel Pose-based Copy and Paste method (PCP) for ReID in complex scenarios" (<i>1st author, under review</i>)</li></p>
+      <p><li> 05/2022, "Hyperspectral Image Classification Based on Gramian Angular Fields Encoding" (<i>3nd author, under review</i>)</li></p>
+      <p><li> 06/2022~ I am preparing experiments on model compression(knowledge distillation) and survey on small object detection, which will take about four months.</li></p>
   </div>
 
 <!-- The Experiences Section -->
@@ -97,14 +100,14 @@
     <br>
 
         <h4><li>07/2021 ~ 03/2022 | CV engineer </li></h4>
-<!--        <p class="w3-justify">-->
-<!--          <a style="color: #447ec9" <strong><font size="4">MediaFlow</font></strong></a>-->
-<!--        </p>-->
-<!--        <img style="width:80%;" src="images/mediaflow.gif">-->
-<!--        <p class="w3-justify">-->
-<!--            <strong>Just based on the python concurrency</strong>, detection(YoLov5) and tracking(ByteTrack) model. As one of the main contributors,-->
-<!--            in the case of inputting a 200w pixel video, I easily demonstrated the whole scheme in <strong>real-time</strong> on CPU(i7-10870H).-->
-<!--        </p>-->
+        <p class="w3-justify">
+          <a style="color: #447ec9" <strong><font size="4">MediaFlow</font></strong></a>
+        </p>
+        <img style="width:80%;" src="images/mediaflow.gif">
+        <p class="w3-justify">
+            <strong>Just based on the python concurrency</strong>, detection(YoLov5) and tracking(ByteTrack) model. As one of the main contributors,
+            in the case of inputting videos with >200w pixels , I easily demonstrate the whole scheme in <strong>real-time</strong> on CPU(i7-10870H).
+        </p>
 
         <p class="w3-justify">
           <a style="color: #447ec9" <strong><font size="4">Model compression in YoLov5</font></strong></a>
@@ -123,12 +126,12 @@
         a robut real-time group 3d pose(and hand pose) estimation system.
         </p>
         <p class="w3-justify">
-          <a style="color: #447ec9" <strong><font size="4">General classification tasks</font></strong></a>
+          <a style="color: #447ec9" <strong><font size="4">General classification and detection tasks</font></strong></a>
         </p>
         <p class="w3-justify">
-        Based on my <a href="https://github.com/xiaochengsky/PyCR" style="color: #447ec9" <strong><font size="2"> PyCR(Pytorch for Classification and Retrieval)</font></strong></a> pipeline, I solved some projects about classification. For example, "classifying whether a tree has been down",
-        "classifying whether vegetation has been destroyed in a large area" and "classifying whether a road slogan has been destroyed" and so on.
-        By using it, I can achieve high accuracy(95+%) easily and quickly in these projects.
+        Based on my <a href="https://github.com/xiaochengsky/PyCR" style="color: #447ec9" <strong><font size="2"> PyCR(Pytorch for Classification and Retrieval) </font></strong></a> pipeline and YoLov5 detector,
+            I solved some projects about classification(Fallen trees, Vegetation destruction with <i>weak supervision</i>, road slogan, 20+ types of vehicles and so on) and detection(general traffic, fire, fumes, dust) tasks.
+        By using it, I can achieve high accuracy(98+%) easily and quickly in these projects.
         </p>
         <br>
 
@@ -220,7 +223,7 @@
     <h4><li>09/2020 ~ 10/2020 | Huawei Global Campus AI Competition 2020 | Top16</li></h4>
       This is an image retrieval task about electronic products, and we(2 people in the team) need to find 10 electronic products that are most similar to each query dataset from gallery dataset. It has a wide range of
       fine-gained requirements. For example, sometimes it need to distinguish between different types of mobile phones(Huawei and apple), and sometimes, it need to distinguish between different
-      products (displays and chargers). The metric is (0.5 * top1 + 0.5 * mAP@10): <br>
+      products (displays and chargers). The metric is (0.5 * top1 + 0.5 * mAP@10). We only used one 2080Ti GPU: <br>
       step 1) Choosing three basic network as ours models: EfficientNet-B5, SEResnext101, ResNeSt50; <br>
       step 2) Data preprocessing and model training: 5-fold cross validation, albumentations, warm up, label smoothing, Adam, GeM, BN Head, ArcFace, EMA and so on; <br>
       step 3) Feature post-processing: TTA, PCA Whitening, feature fusion, and Re-rank. <br>
@@ -230,7 +233,7 @@
     <br>
 
     <h4><li>07/2020 ~ 08/2020 | Kaggle The Wheat detection </li></h4>
-      This is an object detection task about Wheat Detection, and we(2 people in the team) need to mark all the wheat heads in echo images. The metric is mAP@[.5:.75], and the AP = TP / (TP + FP + FN). <br>
+      This is an object detection task about Wheat Detection, and we(2 people in the team) need to mark all the wheat heads in echo images. The metric is mAP@[.5:.75], and the AP = TP / (TP + FP + FN). We only used one 2080Ti GPU<br>
       step 1) Choosing the yolov5 as ours basic model; <br>
       setp 2) Data preprocessing, anchor re-clustering and model training: the Mosaic and albumentations, label smoothing, EMA as so on; <br>
       step 3) Simple parameter adjustment: find a better Iou threshold when calculating nms; <br>
