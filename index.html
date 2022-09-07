@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html" xml:lang="en">
 
 <head>
   <style>p.indent{ padding-left: 1.8em }</style>
@@ -20,18 +20,24 @@
   </style>
 
   <link rel="icon" type="image/png" href="images/icons.png">
+  <script src="./utils/config.js"></script>
 
+  <script src="./utils/utils.js"></script>
 </head>
 
 
 <body class="w3-content" style="max-width:1000px">
 
+
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-collapse w3-top w3-right" style="z-index:3;width:150px" id="mySidebar">
-  <div class="w3-container w3-display-container w3-padding-16">
-    <h3><b>杨成</b></h3>
+  <div class="w3-container w3-display-container w3-padding-16" style="position: relative;">
+    <h3><b class="my-name">YANG Cheng</b></h3>
+    <div class="change-lang" onclick="onClickChangeLang()" title="Change Language">
+    <span class="lang">lang</span>
+    </div>
   </div>
-  <div class="w3-padding-64 w3-text-light-grey w3-large" style="font-weight:bold">
+  <div class="w3-padding-64 w3-text-light-grey w3-large" style="font-weight:bold;">
     <a href="#home" class="w3-bar-item w3-button">Home</a>
     <a href="#news" class="w3-bar-item w3-button">News</a>
     <a href="#Experiences" class="w3-bar-item w3-button">Experiences</a>
@@ -40,8 +46,11 @@
 <!--    <a href="#talks" class="w3-bar-item w3-button">Talks</a>-->
 <!--    <a href="#service" class="w3-bar-item w3-button">Services</a>-->
     <a href="#award" class="w3-bar-item w3-button">Awards</a>
+    <!-- <a class="w3-bar-item w3-button" style="position: absolute;ri" onclick="onClickChangeLang()">Change Lang</a> -->
+
   </div>
 </nav>
+
 
 <!-- Top menu on small screens -->
 <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
@@ -49,6 +58,7 @@
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right"  style="font-stretch: extra-expanded;" onclick="w3_open()"><b>≡</b></a>
   </div>
 </header>
+
 
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
@@ -61,9 +71,10 @@
 
 <!-- The Home Section -->
     <div class="w3-container w3-center w3-padding-32" id="home">
-      <img style="width: 80%;max-width: 80px" alt="profile photo" src="images/yc.png">
-      <h1>YANG Cheng</h1>
-        <p class="w3-justify" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:600px">
+      <img style="width: 80%;max-width: 80px;" alt="profile photo"  src="images/yc.png">
+      <!-- <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=n&d=oIlikfuwF0J9UrtGxwFr2FZDZBj_bYHnGaPL44TdF3I"></script> -->
+      <h1 class="my-name">YANG Cheng</h1>
+        <p class="my-cv" class="w3-justify" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:600px">
 <!--          I am a machine vision engineer at <a href="http://www.sutpc.com//">SUTPC(ShenYanAI)</a>, Shenzhen, where I work on deep learning and computer vision, etc.-->
 <!--            Before that, I did my master degree at school of EIC, <a href="https://www.hust.edu.cn/">Huazhong University of Science and Technology(HUST) </a>, Wuhan, China, in 2021,-->
 <!--            where I was advised by Prof. <a href="http://eic.hust.edu.cn/professor/guopeng/">Peng Guo</a></a>.-->
@@ -82,23 +93,27 @@
 
 <!-- The News Section -->
   <div class="w3-container w3-light-grey w3-padding-32" id="news">
-   <h2>News</h2>
-<!--      <p><li> 08/2021, one paper has been published by <a href="https://arxiv.org/abs/2107.10479">arXiv</a>, "Copy and Paste method based on Pose for Re-identification".</li></p>-->
-      <p><li> 05/2022, "A novel Pose-based Copy and Paste method (PCP) for ReID in complex scenarios" (<i>1st author, under review</i>)</li></p>
-      <p><li> 06/2022~ I am preparing experiments on model compression(knowledge distillation) and small object detection, which will take about four months.</li></p>
-      <p><li> 07/2022, "Hyperspectral Image Classification Based on Gramian Angular Fields Encoding" (accepted by <a href="https://ccece2022.ieee.ca">IEEE CCECE</a>)</li></p>
-      <p><li> 07/2022, We won 1st place on GeoAI Martian Challenge 2022!</li></p>
+<!--      <h2>News</h2>-->
+      <h2 class="news">News</h2>
+          <p><li> 06/2022~ I am preparing experiments on model compression(knowledge distillation) and small object detection, which will take about four months.</li></p>
+          <p><li> 07/2022, "A novel Pose-based Copy and Paste method (PCP) for ReID in complex scenarios" (<i>1st author, under review</i>)</li></p>
+          <p><li> 07/2022, "Hyperspectral Image Classification Based on Gramian Angular Fields Encoding" (accepted by <a href="https://ccece2022.ieee.ca">IEEE CCECE</a>)</li></p>
+          <p><li> 08/2022, We are located in 1st place on GeoAI Martian Challenge 2022! (Since the organizers have temporarily extended the deadline from August to December, we are
+         now only in the tentative 1st place.)</li></p>
   </div>
 
 <!-- The Experiences Section -->
   <div class="w3-container w3-padding-32" id="Experiences">
-    <h2>Experiences</h2>
-    <p class="w3-justify">
-      I am curious about many things when I am a student. Also I wanted to find a research direction that suits me. During undergraduate to master study,
-        I have learned <strong>embedded development</strong>, <strong>software development</strong>, <strong>computer vision</strong> and other related technologies.
-        My experiences and projects are as follows.
-    </p>
-    <br>
+<!--    <h2>Experiences</h2>-->
+      <h2 class="experience">Experiences</h2>
+
+        <p class="my_experience" class="w3-justify">
+<!--        <p class="my-experience" class="w3-justify" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:600px">-->
+          I am curious about many things when I am a student. Also I wanted to find a research direction that suits me. During undergraduate to master study,
+            I have learned <strong>embedded development</strong>, <strong>software development</strong>, <strong>computer vision</strong> and other related technologies.
+            My experiences and projects are as follows.
+        </p>
+        <br>
 
         <h4><li>07/2021 ~ 03/2022 | CV engineer </li></h4>
 
@@ -114,24 +129,26 @@
         <p class="w3-justify">
           <a style="color: #447ec9" <strong><font size="4">Model compression in YoLov5</font></strong></a>
         </p>
-
-        <p class="w3-justify">
+<!--        <p class="w3-justify">-->
+        <p class="yolov5" class="w3-justify">
         When we deploy neural network models, we have to face their high computational cost and memory footprint. It seems that we have to make a strict choice
         between hardware cost and accuracy. But we know almost all models have many redundent parameters. I summarized 6 methods of model pruning and 3 methods of model knowledge distillation as mainly benchmarks in YoLov5.
         In short, I implemented reduce FLOPs and Parameters by about 35% without negatively impacting the mAP by using those methods. The detailed benckmarks will coming.
         </p>
 
-        <p class="w3-justify">
-          <a style="color: #447ec9" <strong><font size="4">2D/3D hand keypoint/human pose estimation</font></strong></a>
-        </p>
-        <p class="w3-justify">
-        Recently, I focus on the 2D/3D pose estimation. It mainly includes hand keypoint and human pose estimation. Based on MMPose and some papers, I start going in this direction. My short term goals is to achieve
-        a robut real-time group 3d pose(and hand pose) estimation system.
-        </p>
+<!--        2d/3d姿态估计删除-->
+<!--        <p class="w3-justify">-->
+<!--          <a style="color: #447ec9" <strong><font size="4">2D/3D hand keypoint/human pose estimation</font></strong></a>-->
+<!--        </p>-->
+<!--        <p class="w3-justify">-->
+<!--        Recently, I focus on the 2D/3D pose estimation. It mainly includes hand keypoint and human pose estimation. Based on MMPose and some papers, I start going in this direction. My short term goals is to achieve-->
+<!--        a robut real-time group 3d pose(and hand pose) estimation system.-->
+<!--        </p>-->
         <p class="w3-justify">
           <a style="color: #447ec9" <strong><font size="4">General classification and detection tasks</font></strong></a>
         </p>
-        <p class="w3-justify">
+<!--        <p class="w3-justify">-->
+        <p class="general" class="w3-justify">
         Based on my <a href="https://github.com/xiaochengsky/PyCR" style="color: #447ec9" <strong><font size="2"> PyCR(Pytorch for Classification and Retrieval) </font></strong></a> pipeline and YoLov5 detector,
             I solved some projects about classification(Fallen trees, Vegetation destruction with <i>weak supervision</i>, road slogan, 20+ types of vehicles and so on) and detection(general traffic, fire, fumes, dust) tasks.
         By using it, I can achieve high accuracy(98+%) easily and quickly in these projects.
@@ -143,7 +160,8 @@
           <a style="color: #447ec9" <strong><font size="4">Optimize classification models</font></strong></a>
         </p>
 
-        <p class="w3-justify">
+<!--        <p class="w3-justify">-->
+        <p class="yitu" class="w3-justify">
         Those project aim to optimize some classification models, such as <i><strong>"Cyclist and pedestrian classification model"</strong></i>  <br>
         In this projects of ReID, I only used 3w imbalanced( <i><strong>cyclist: pedestrain ~ 1:30</strong></i>) images to complete the classification of 300w images. Through research related work, such as gan, image composition,
         I proposed a method callde '<strong>Copy and Paste Based on Pose(CPP)</strong>', which can effectively alleviate the sample imbalance problem in this situation.
@@ -158,7 +176,8 @@
         </p>
         <img style="width:35%;" src="images/sku.png">
 
-        <p class="w3-justify">
+<!--        <p class="w3-justify">-->
+        <p class="baidu" class="w3-justify">
         This project aims to achieve high-precision commodity bill settlement. When uses place the dinner plate under its camera, it will quicky automatically
         generate the correct bill within 1 second. <br>
         For me, I was responsible for its visual processing, such as commodity detection and classification. In order to make it work more stable, I combined object detection and retrieval to solve the problem and avoid
@@ -178,7 +197,8 @@
           <a style="color: #447ec9" <strong><font size="4">Cross-platform Tencent Cloud image and speech processing interface tool</font></strong></a>
         </p>
 <!--        <img style="width:80%;" src="images/Aegis.png">-->
-        <p class="w3-justify">
+<!--        <p class="w3-justify">-->
+        <p class="tx1" class="w3-justify">
         This project aims to design a cross-platform image and speech processing interface tool based on Golang. Because
         for the convenience of users to use some image and speech processing services, I wanted to design a cross-platform
         tools, which allowed uers to experience many basic services that deployed on cloud servers, no matter what operating system they used(Windows, Linux, Mac).
@@ -189,7 +209,8 @@
           <a style="color: #447ec9" <strong><font size="4">Aegis-The Blue Army Attack Platform</font></strong></a>
         </p>
         <img style="width:80%;" src="images/Aegis.png">
-        <p class="w3-justify">
+<!--        <p class="w3-justify">-->
+        <p class="tx2" class="w3-justify">
         This project aims to design a attack platform called <i><strong>Aegis—The Blue Army Attack Platform</strong></i>, which used to verify the
         performance of the company's defense platform via some DDOS attacks. <br>
         In this project, I was responsible for the frontend and backend programs. When users input the attack request with specific parameters to web,
@@ -205,7 +226,8 @@
           <a style="color: #447ec9" <strong><font size="4">The LIFX Bulb</font></strong></a>
         </p>
         <img style="width:35%;" src="images/Lifx.jpg">
-        <p class="w3-justify">
+<!--        <p class="w3-justify">-->
+        <p class="lifx" class="w3-justify">
         This product called the <i><strong>LIFX blub</strong></i>. We can control one or more bulbs by using mobile phone's wifi, and there was a variety of
         lighting effects. It was supported real-time control, flexible portal configuration in mobile, and so on.<br>
         In this project, I was responsible for the its hardware program control. We used the ESP8266 as the Micro Controller Unit to drive bulbs, which comes with a
@@ -223,19 +245,23 @@
 <!--      <p class="w3-left-align" style="line-height:200%">-->
 <!--        I'm interested in devleoping <strong>efficient models</strong> and <strong>build pipeline</strong> for computer vision (e.g. classification, detection, and 2D/3D pose).-->
 <!--      </p>-->
+
     <h4><li>09/2020 ~ 10/2020 | Huawei Global Campus AI Competition 2020 | Top16</li></h4>
+    <p class="huawei" class="w3-justify">
       This is an image retrieval task about electronic products, and we(2 people in the team) need to find 10 electronic products that are most similar to each query dataset from gallery dataset. It has a wide range of
       fine-gained requirements. For example, sometimes it need to distinguish between different types of mobile phones(Huawei and apple), and sometimes, it need to distinguish between different
-      products (displays and chargers). The metric is (0.5 * top1 + 0.5 * mAP@10). We only used one 2080Ti GPU: <br>
+      products (display screens and chargers). The metric is (0.5 * top1 + 0.5 * mAP@10). We only used one 2080Ti GPU: <br>
       step 1) Choosing three basic network as ours models: EfficientNet-B5, SEResnext101, ResNeSt50; <br>
       step 2) Data preprocessing and model training: 5-fold cross validation, albumentations, warm up, label smoothing, Adam, GeM, BN Head, ArcFace, EMA and so on; <br>
       step 3) Feature post-processing: TTA, PCA Whitening, feature fusion, and Re-rank. <br>
-      step 4) Analyzing some badcases: We found that there are multi-agent scene in the datasets(About 100+). For example, in an image, there are both a display, a host and a mouse, and they lead to unclear feature
+      step 4) Analyzing some badcases: We found that there are multi-scene scene in the datasets(About 100+). For example, in an image, there are both a display, a host and a mouse, and they lead to unclear feature
       representation. Because we were surprised to find our model cannot obtain similar results in these images. So, we used their attention map to cut the image into multiple small images corresponding to each subject,
       then we aggregated the feature of multiple small images as its features.
+    </p>
     <br>
 
     <h4><li>07/2020 ~ 08/2020 | Kaggle The Wheat detection </li></h4>
+    <p class="kaggle" class="w3-justify">
       This is an object detection task about Wheat Detection, and we(2 people in the team) need to mark all the wheat heads in echo images. The metric is mAP@[.5:.75], and the AP = TP / (TP + FP + FN). We only used one 2080Ti GPU<br>
       step 1) Choosing the yolov5 as ours basic model; <br>
       setp 2) Data preprocessing, anchor re-clustering and model training: the Mosaic and albumentations, label smoothing, EMA as so on; <br>
@@ -246,6 +272,7 @@
       badcase and setting some rules to 'solov' the misdetection will undoubtedly only lead to over-fitting results. This experience taught me that when analyzing problems, we must learn to consider from a macro
       perspective. At the same time, the analysis of badcase should not be discussed separately from model and loss. <br>
       BTW, The controversy caused by yolov5 is too great, our results is were cancelled. If not, our score should be in the top 2%.
+    </p>
     <br>
   </div>
 
@@ -254,18 +281,20 @@
   <div class="w3-container w3-padding-32" id="projects">
     <h2>Projects</h2>
 
-    <p class="w3-justify">
+<!--    <p class="w3-justify">-->
+      <p class="proj" class="w3-justify">
         In the second half of the master's career(01/2020 ~ 06/2021), I mainly focus on computer vision, and take it as my research direction.
         In the first half of the master's career(09/2018 ~ 12/2019), I mainly focus on hardware programming, embedded development, software development, and have learned some hardware-related knowledge. At the same time, my master's dissertation is
         also closely related to them.
-    </p>
+      </p>
 
         <h4><li> 01/2021 ~ 02/2021 | Student | HUST</li></h4>
         <p class="w3-justify">
           <a href="https://github.com/xiaochengsky/PyCR" style="color: #447ec9" <strong><font size="4"> PyCR(Pytorch for Classification and Retrieval)</font></strong></a>
         </p>
         <img style="width:80%;" src="images/pycr.png">
-        <p class="w3-justify">
+<!--        <p class="w3-justify">-->
+        <p class="pycr" class="w3-justify">
         When I finished the HuaWei's competition, I started to think about how to complete some tasks efficiently. The classification and retrieval are familiar to me, So I was thinking about how to build a
         pipeline, which can make me implement these functions better and faster. <br>
         At this stage, there is no pipeline that directly merge classification tasks and retrieve tasks. For example, FastReID is a framework for end-to-end retrieving in ReID, PyRetri is a pipeline that directly
@@ -280,8 +309,9 @@
         </p>
         <img style="width:30%;" src="images/system.png"> <br>
         <img style="width:30%;" src="images/gateway.png"> <img style="width:30%;" src="images/node.png"> <img style="width:35%;" src="images/terminal.png">
-        <p class="w3-justify">
-        This is research topic, but also a project. Its goal is to create a low-complexity, low cost and high-efficientcy(QPS) product which serves group sports monitoring. It's mainly to monitor some
+<!--        <p class="w3-justify">-->
+        <p class="football" class="w3-justify">
+        This is research topic, but also a project. Its goal is to design a low-complexity, low cost and high-efficientcy(QPS) product which serves group sports monitoring. It's mainly to monitor some
         pyhsical information of athletes, such as speed, heart rate, real-time position, number of jumps and height, etc. <br>
         The projects is divided into three parts, which include a lot of collection nodes(30+), the gateway(1), and display terminal(1). Each collection nodes is composed of CC1310 and a variety of sensors, which are
         used to collect real-time physical data of athletes. The gateway is mainly composed of STM32, multiple CC1310, ESP8266 and other auxiliary chips(FLASH, Power management). The function of the gateway is
@@ -294,7 +324,7 @@
         </p>
         <br>
   </div>
-  
+
 <!--  &lt;!&ndash; The Talks Section &ndash;&gt;-->
 <!--  <div class="w3-container w3-light-grey w3-padding-32" id="talks">-->
 <!--    <h2>Talks</h2>-->
@@ -339,6 +369,10 @@
     <p><li> 2016,           The National Third Prize, the MCU Development of the Blue Bridge Cup.</p>
     <p><li> 2015/2016, The First Prize Scholarship, Hunan Agricultural University.</p>
     <p><li> 2015,           The Head of the Student Union Work-Study Department and Outstanding Student Leader.</li></p>
+  </div>
+  <h2>Vistors Map</h2>
+  <div class="map">
+    <a href='https://clustrmaps.com/site/1bpg7'  title='Visit tracker'><img src='https://clustrmaps.com/map_v2.png?cl=ffffff&w=850&t=tt&d=oIlikfuwF0J9UrtGxwFr2FZDZBj_bYHnGaPL44TdF3I'/></a>
   </div>  
 
 
