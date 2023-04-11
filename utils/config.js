@@ -86,8 +86,10 @@ const langObj = {
     lang: '中文',
     news: 'news',
     cv: `
-            I am a machine vision engineer at a state-owned enterprise, Shenzhen,
-            where I work on deep learning and computer vision, etc.             Before that, I did my master degree at school of EIC, <a href="https://www.hust.edu.cn/">Huazhong University of Science and Technology(HUST) </a>, Wuhan, China, in 2021,             where I was advised by Prof. <a href="http://eic.hust.edu.cn/professor/guopeng/">Peng Guo</a></a>.             I did my bachelors at school of Information and Intelligence, <a href="https://www.hunau.edu.cn/">Hunan Agricultural University(HUNAU) </a>, Changsha, China, in 2018.`,
+//            I am a machine vision engineer at a state-owned enterprise, Shenzhen,
+//            where I work on deep learning and computer vision, etc.             Before that, I did my master degree at school of EIC, <a href="https://www.hust.edu.cn/">Huazhong University of Science and Technology(HUST) </a>, Wuhan, China, in 2021,             where I was advised by Prof. <a href="http://eic.hust.edu.cn/professor/guopeng/">Peng Guo</a></a>.             I did my bachelors at school of Information and Intelligence, <a href="https://www.hunau.edu.cn/">Hunan Agricultural University(HUNAU) </a>, Changsha, China, in 2018.`,
+//    experience: 'Experience',
+            I did my master degree at school of EIC, <a href="https://www.hust.edu.cn/">Huazhong University of Science and Technology(HUST) </a>, Wuhan, China, in 2021,             where I was advised by Prof. <a href="http://eic.hust.edu.cn/professor/guopeng/">Peng Guo</a></a>.             I did my bachelors at school of Information and Intelligence, <a href="https://www.hunau.edu.cn/">Hunan Agricultural University(HUNAU) </a>, Changsha, China, in 2018.`,
     experience: 'Experience',
 
     my_experience: `
